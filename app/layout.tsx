@@ -5,8 +5,8 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Trello App",
-  description: "Trello Clone for Education Purposes",
+  title: "TaskFlow App",
+  description: "TaskFlow for managing tasks powered by AI",
 };
 
 export default function RootLayout({
