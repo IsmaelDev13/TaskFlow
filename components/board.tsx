@@ -97,9 +97,15 @@ const Board = (props: Props) => {
   useEffect(() => {
     getBoard();
   }, [getBoard]);
+
+  const dateNow = new Date();
   return (
     <DragDropContext onDragEnd={handleOnDragEnd}>
-      <Droppable droppableId="board" direction="horizontal" type="column">
+      <Droppable
+        droppableId={`board-${dateNow}`}
+        direction="horizontal"
+        type="column"
+      >
         {(provided) => (
           <div
             className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl mx-auto"
